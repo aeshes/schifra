@@ -13,6 +13,8 @@ add_library(
     core/point.cpp
     core/add.cpp
     core/mult.cpp
+    core/embed.cpp
+    core/sqrt.cpp
 )
 
 target_link_directories(schifra PRIVATE ${GMP_LIB_PATH})

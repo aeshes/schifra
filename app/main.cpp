@@ -28,4 +28,11 @@ int main()
 
     eccrypt_point_mul(s, p, k, curve);
     gmp_printf("(%Zd, %Zd)\n", s.x, s.y);
+
+    mpz_t x;
+    mpz_init_set_ui(x, 13);
+
+    eccrypt_embed(p, q, x, curve);
+    gmp_printf("(%Zd, %Zd)\n", p.x, p.y);
+    gmp_printf("(%Zd, %Zd)\n", q.x, q.y);
 }
